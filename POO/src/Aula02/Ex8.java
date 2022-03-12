@@ -12,7 +12,7 @@ public class Ex8 {
 		double C = Math.sqrt( A*A + B*B );
 
 		System.out.println( C );
-		System.out.println( Math.toDegrees(Math.asin( A / C )));
+		System.out.println( Math.toDegrees(Math.asin( A / C )) );
 
 		sc.close();
 	}
