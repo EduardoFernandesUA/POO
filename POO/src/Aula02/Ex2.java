@@ -2,12 +2,11 @@ package Aula02;
 
 import java.util.Scanner;
 
-public class Ex1 {
+public class Ex2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		Double km = sc.nextDouble();;
-		System.out.println( km/1.609 + " milhas" );
+		System.out.println(sc.nextDouble() * 1.8 + 32);
 
 		sc.close();
 	}
