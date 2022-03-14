@@ -6,7 +6,7 @@ public class Ex6 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		int total = sc.nextInt();
+		int total = Helpers.getInt(sc, "total seconds: ");
 
 		int segundos = total%60;
 		int minutos = (total-segundos)/60%60;
