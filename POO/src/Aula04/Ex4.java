@@ -14,9 +14,18 @@ public class Ex4 {
 
 		int diasDoMes = diasNoMes(mes, ano);
 
-		System.out.println("\n\n" + mesesNomes[mes-1] + " " + ano);
+		System.out.println("\n");
+
+		// print mes e ano centrados
+		String header = mesesNomes[mes-1] + " " + ano;
+		for(int i = 0; i < (20-header.length())/2 ; i++) {
+			System.out.print(" ");
+		}
+		System.out.println(header);
+
 		System.out.println("Su Mo Tu We Th Fr Sa");
 
+		// preenche os dias em branco
 		for(int i = 0; i < (diaDaSemana-1); i++)
 		System.out.print("   ");
 		
