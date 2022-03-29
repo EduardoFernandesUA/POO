@@ -11,7 +11,7 @@ public class Ex2 {
 		System.out.println("n caracteres (0..9): " + countDigits(str));
 		System.out.println("n spaces: " + countSpaces(str));
 		System.out.println("só minusculas?: " + (onlyLowerCase(str) ? "sim" : "nao"));
-		System.out.println("sem double spaces: " + rmDoubleSpaces(str));
+		System.out.println("sem double spaces: " + removeMultipleSpaces(str));
 		System.out.println("palindromo?: " + (isPalindrome(str) ? "sim" : "nao"));
 	}
 
@@ -27,7 +27,7 @@ public class Ex2 {
 		return str.equals(str.toLowerCase());
 	}
 
-	public static String rmDoubleSpaces(String str) {
+	public static String removeMultipleSpaces(String str) {
 		return str.replaceAll("[\\s]+", " ");
 	}
 

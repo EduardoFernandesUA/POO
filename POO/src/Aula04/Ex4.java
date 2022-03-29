@@ -14,7 +14,7 @@ public class Ex4 {
 
 		int diasDoMes = diasNoMes(mes, ano);
 
-		System.out.println("\n");
+		System.out.print("\n");
 
 		// print mes e ano centrados
 		String header = mesesNomes[mes-1] + " " + ano;
@@ -27,7 +27,7 @@ public class Ex4 {
 
 		// preenche os dias em branco
 		for(int i = 0; i < (diaDaSemana-1); i++)
-		System.out.print("   ");
+		System.out.printf("%3s","");
 		
 		int x = diaDaSemana-1;
 		for(int i = 1; i <= diasDoMes; i++) {
@@ -38,13 +38,16 @@ public class Ex4 {
 				System.out.println();
 			}
 		}
-		System.out.println("\n");
+		System.out.print("\n\n");
 	}
 
 	public static int diasNoMes(int mes, int ano) {
+		assert mes >= 1 && mes <= 12;
+
 		int[] dias = {31,28,31,30,31,30,31,31,30,31,30,31};
 
 		int bissexto = 0;
+		// method leapYear anoBissexto
 		if( mes==2 && ((ano % 400 == 0) || ( (ano % 4 == 0) && (ano % 100 != 0) )) )
 			bissexto = 1;
 		

@@ -9,10 +9,13 @@ public class Ex1 {
 		String str = sc.nextLine();
 
 		System.out.println("Minusculas: "+str.toLowerCase());
-		System.out.println("Ultimo Caracter: "+str.charAt(str.length()-1));
-		System.out.println("Primeiros 3 caracteres: "+str.substring(0, 3));
+		if(str.length()>=1) 
+			System.out.println("Ultimo Caracter: "+str.charAt(str.length()-1));
+		if(str.length()>=3) 
+			System.out.println("Primeiros 3 caracteres: "+str.substring(0, 3));
 
-		// ...
+		System.out.println("Com _: "+str.replaceAll(" ", "_"));
+		System.out.println("Têm algum 'a': "+(str.indexOf("a")!=-1 ? "Sim" : "Não"));
 
 	}
 }
