@@ -10,7 +10,7 @@ public class Ex4 {
 
 		int mes = readInRange("Mes: ", 1, 12);
 		int ano = readInteger("Ano: ");
-		int diaDaSemana = readInRange("Dia da semana: ", 1, 7);
+		int diaDaSemana = readInRange("Dia da semana: ", 1, 7) % 7;
 
 		int diasDoMes = diasNoMes(mes, ano);
 
@@ -26,10 +26,10 @@ public class Ex4 {
 		System.out.println("Su Mo Tu We Th Fr Sa");
 
 		// preenche os dias em branco
-		for(int i = 0; i < (diaDaSemana-1); i++)
+		for(int i = 0; i < diaDaSemana; i++)
 		System.out.printf("%3s","");
 		
-		int x = diaDaSemana-1;
+		int x = diaDaSemana;
 		for(int i = 1; i <= diasDoMes; i++) {
 			System.out.printf("%2d ", i);
 			x += 1;
