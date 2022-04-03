@@ -19,32 +19,34 @@ public class Date {
 
 	public void increment(int days) {
 		while( days > 0 ) {
-			int maxMonthDays = monthDays(this.month, this.year);
-			if( this.day == maxMonthDays ) {
-				this.day = 0;
-				this.month++;
-				if( this.month == 13 ) {
+			if( this.day == monthDays(this.month, this.year) ) {
+				this.day = 1;
+				if( this.month == 12 ) {
 					this.month = 1;
 					this.year++; 
+				} else {
+					this.month++;
 				}
+			} else {
+				this.day++;
 			}
-			this.day++;
 			days--;
 		}
 	}
 
 	public void decrement(int days) {
 		while( days > 0 ) {
-			int maxMonthDays = monthDays(this.month, this.year);
 			if( this.day == 1 ) {
-				this.day = maxMonthDays-1;
-				this.month--;
+				this.day = monthDays(this.month-1, this.year);
 				if( this.month == 1 ) {
 					this.month = 12;
 					this.year--; 
+				} else {
+					this.month--;
 				}
+			} else {
+				this.day--;
 			}
-			this.day--;
 			days--;
 		}
 	}
