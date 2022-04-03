@@ -37,13 +37,13 @@ public class Date {
 	public void decrement(int days) {
 		while( days > 0 ) {
 			if( this.day == 1 ) {
-				this.day = monthDays(this.month-1, this.year);
 				if( this.month == 1 ) {
 					this.month = 12;
 					this.year--; 
 				} else {
 					this.month--;
 				}
+				this.day = monthDays(this.month, this.year);
 			} else {
 				this.day--;
 			}
