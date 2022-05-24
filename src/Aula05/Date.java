@@ -1,6 +1,6 @@
 package Aula05;
 
-public class Date {
+public class Date implements Comparable {
 	private int day;
 	private int month;
 	private int year;
@@ -65,6 +65,18 @@ public class Date {
 
 	public String toString() {
 		return String.format("%04d-%02d-%02d", this.year, this.month, this.day);
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		Date date = (Date) o;
+		if( this.year!=date.year ) 
+			return  this.year>date.year ? 1 : -1;
+		if( this.month!=date.month ) 
+			return this.month>date.month ? 1 : -1;
+		if( this.day!=date.day ) 
+			return this.day>date.day ? 1 : -1;
+		return 0;
 	}
 	
 
