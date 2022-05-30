@@ -5,27 +5,24 @@
 
 package Aula10;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
 public class Ex3 {
     public static void main(String[] args) {
-        String s = "Hello World";
-        Map<Character, HashSet<Integer>> hm = new HashMap<>();
+        String string = "Hello World";
+        Map<Character, ArrayList<Integer>> map = new HashMap<>();
 
-        for(int i = 0; i < s.length(); i++){
-            HashSet<Integer> hs = new HashSet<>();
-            for(int j = 0; j < s.length(); j++){
-                if(s.charAt(i) == s.charAt(j)){
-                    hs.add(j);
-                }
-            }
-            hm.put(s.charAt(i), hs);
+        int i=0;
+        for( Character character : string.toCharArray() ){
+            if( !map.containsKey(character) ) 
+                map.put(character, new ArrayList<>());
+            map.get(character).add(i);
+            i++;
         }
 
-        for (Map.Entry<Character, HashSet<Integer>> k : hm.entrySet()) {
-            System.out.println(k.getKey() + " = " + k.getValue() + " :)");
-        }
+        System.out.println(map.toString());
     }
 }
