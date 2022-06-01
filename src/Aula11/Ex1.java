@@ -2,10 +2,8 @@ package Aula11;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.HashMap;
 import java.util.Scanner;
 import java.util.TreeMap;
-import java.util.regex.Pattern;
 
 public class Ex1 {
     public static void main(String[] args) {
