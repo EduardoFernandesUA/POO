@@ -2,7 +2,6 @@ package Aula11;
 
 import java.io.File;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Scanner;
 import java.util.TreeMap;
 
@@ -61,9 +60,6 @@ public class Ex2 {
                 companhia = new Companhia(code, voo.code.substring(0, 2));
                 companhias.put(companhia.code, companhia);
             }
-            // System.out.println(voo.code.substring(0, 2));
-            // System.out.println(companhias.keySet());
-            // System.out.println(companhia);
             System.out.printf("%-7s%-10s%-25s%-25s%-10s%s\n", voo.time, voo.code, companhia.name, voo.city, voo.delay!=null ? voo.delay : "", voo.delay!=null ? voo.atraso() : "");
         });
     }
