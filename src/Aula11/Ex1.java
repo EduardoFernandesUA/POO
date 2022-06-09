@@ -15,7 +15,7 @@ public class Ex1 {
             
             scanner.findAll("[A-zÀ-ú0-9]{3,}")
                 .reduce((prevMatch,  match) -> {
-                    String prevWord = prevMatch.group(0);
+                    String prevWord = prevMatch.group(0).toLowerCase();
                     String word = match.group(0).toLowerCase();
 
                     if( !map.containsKey(prevWord) ) {
