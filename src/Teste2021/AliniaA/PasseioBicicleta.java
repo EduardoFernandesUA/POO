@@ -30,10 +30,6 @@ public class PasseioBicicleta extends Atividade {
         return returnList;
     }
 
-    public int getNumLocais() {
-        return this.locais.size();
-    }
-
     @Override
     public String toString() {
         return super.toString();

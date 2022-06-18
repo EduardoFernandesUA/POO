@@ -9,7 +9,6 @@ public abstract class Atividade implements PontosdeInteresse {
 
     public int getNumero() { return this.numero; }
     public String getNome() { return this.nome; }
-    public abstract int getNumLocais();
 
     @Override
     public String toString() {

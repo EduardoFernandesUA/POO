@@ -24,11 +24,6 @@ public class Gastronomia extends Atividade {
     public List<Restaurante> getLista() { return this.lista; }
 
     @Override
-    public int getNumLocais() {
-        return lista.size();
-    }
-
-    @Override
     public List<String> locais() {
         List<String> returnList = new ArrayList<>();
         for(Restaurante restaurante : this.lista) {
