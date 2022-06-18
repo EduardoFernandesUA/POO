@@ -18,7 +18,7 @@ public class AgenciaTuristica {
     public int totalItems() {
         int sum = 0;
         for(Atividade atividade : atividades) {
-            sum += atividade.getNumLocais();
+            sum += atividade.locais().size();
         }
         return sum;
     }

@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class PasseioBicicleta extends Atividade {
@@ -20,8 +22,12 @@ public class PasseioBicicleta extends Atividade {
         this.locais.add(local);
     }
 
-    public String locais() {
-        return this.locais.toString();
+    public List<String> locais() {
+        List<String> returnList = new ArrayList<>();
+        for (String local : locais) {
+            returnList.add(local);
+        }
+        return returnList;
     }
 
     public int getNumLocais() {

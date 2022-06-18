@@ -29,7 +29,11 @@ public class Gastronomia extends Atividade {
     }
 
     @Override
-    public String locais() {
-        return this.lista.toString();
+    public List<String> locais() {
+        List<String> returnList = new ArrayList<>();
+        for(Restaurante restaurante : this.lista) {
+            returnList.add(restaurante.getNome());
+        }
+        return returnList;
     }
 }

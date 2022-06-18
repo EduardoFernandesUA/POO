@@ -7,6 +7,8 @@ public class Restaurante {
         this.tipoComida = tipoComida;
     }
 
+    public String getNome() { return this.nome; }
+
     @Override
     public String toString() {
         return String.format("Restaurante [nome=%s, tipo=%s]", this.nome, this.tipoComida.toString());

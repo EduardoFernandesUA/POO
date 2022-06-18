@@ -1,4 +1,4 @@
-public abstract class Atividade {
+public abstract class Atividade implements PontosdeInteresse {
     protected int numero;
     protected String nome;
 
@@ -6,8 +6,6 @@ public abstract class Atividade {
         this.numero = numero;
         this.nome = nome;
     }
-
-    public abstract String locais();
 
     public int getNumero() { return this.numero; }
     public String getNome() { return this.nome; }
